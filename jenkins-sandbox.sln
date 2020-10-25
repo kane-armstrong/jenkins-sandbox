@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherAPI", "src\WeatherAP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{463F8807-A3B4-4DAB-AF1F-3B7BFB2F710A}"
 	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
 		Jenkinsfile = Jenkinsfile
 	EndProjectSection
 EndProject
