@@ -8,18 +8,29 @@ pipeline {
     stages {
         stage('Report version number') {
             steps {
-                echo "Image tag is $IMAGE_TAG"
+                echo "Image tag is $env.REGISTRY/$IMAGE_TAG"
             }
         }
-        stage('Build Docker Image') {
-            steps {
-                sh 'docker build . -t $IMAGE_TAG'
+        stage('Build image') {
+          steps{
+            script {
+              dockerImage = docker.build "$env.REGISTRY/$IMAGE_TAG"
             }
+          }
         }
-        stage('Publish Docker Image') {
-            steps {
-                sh 'docker push $IMAGE_TAG'
+        stage('Push image') {
+          steps{
+            script {
+              docker.withRegistry( '', $env.REGISTRY_CREDENTIAL ) {
+                dockerImage.push()
+              }
             }
+          }
+        }
+        stage('Cleanup images') {
+          steps{
+            sh "docker rmi "$env.REGISTRY/$IMAGE_TAG"
+          }
         }
     }
 }
