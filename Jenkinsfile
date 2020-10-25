@@ -22,7 +22,7 @@ pipeline {
             }
           }
         }
-        stage('Cleanup images') {
+        stage('Cleanup') {
           steps{
             sh "docker rmi $IMAGE_TAG"
           }
