@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    properties([
+      buildDiscarder(
+        logRotator(artifactDaysToKeepStr: '2', numToKeepStr: '10')
+      )
+    ])
     environment {
         MAJOR_VERSION = '0'
         MINOR_VERSION = '0'
