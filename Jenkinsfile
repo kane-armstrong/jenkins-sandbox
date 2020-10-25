@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                echo 'Image tag is ${imageTag}'
+                echo 'Image tag is $IMAGE_TAG'
             }
         }
     }
