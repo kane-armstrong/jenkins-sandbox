@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{83F9750A-DDD5-40F8-BA3D-B7EFD493BECB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherAPI", "src\WeatherAPI\WeatherAPI.csproj", "{F57B9325-BA55-4C93-911A-D5E10C849752}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{463F8807-A3B4-4DAB-AF1F-3B7BFB2F710A}"
+	ProjectSection(SolutionItems) = preProject
+		Jenkinsfile = Jenkinsfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Debug|x64.Build.0 = Debug|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Debug|x86.Build.0 = Debug|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Release|x64.ActiveCfg = Release|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Release|x64.Build.0 = Release|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Release|x86.ActiveCfg = Release|Any CPU
+		{F57B9325-BA55-4C93-911A-D5E10C849752}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F57B9325-BA55-4C93-911A-D5E10C849752} = {83F9750A-DDD5-40F8-BA3D-B7EFD493BECB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77E426AA-E9D4-4A82-95DF-4EBD13230557}
+	EndGlobalSection
+EndGlobal
