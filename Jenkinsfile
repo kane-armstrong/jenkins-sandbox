@@ -1,9 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('Build .NET Core') {
+        stage('Clean') {
             steps {
-                sh 'dotnet build'
+                sh 'dotnet clean'
+            }
+        }
+        stage('Restore packages') {
+            steps {
+                sh 'dotnet restore'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'dotnet build --configuration Release'
             }
         }
     }
