@@ -1,6 +1,3 @@
-def majorVersion = '0'
-def minorVersion = '0'
-
 pipeline {
     agent any
     environment {
