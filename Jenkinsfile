@@ -1,19 +1,24 @@
+def majorVersion = '1'
+def minorVersion = '0'
+
+def imageTag = 'sandbox/jenkins-sandbox:${majorVersion}.${minorVersion}.{env.BUILD_NUMBER}'
+
 pipeline {
     agent any
+    environment {
+        REGISTRY = 'registry.kanearmstrong.com'
+        MAJOR_VERSION  = '0'
+        MINOR_VERSION = '0'
+    }
     stages {
-        stage('Clean') {
+        stage('Build Docker Image') {
             steps {
-                sh 'dotnet clean'
+                sh 'docker build . -t ${imageTag}'
             }
         }
-        stage('Restore packages') {
+        stage('Publish Docker Image') {
             steps {
-                sh 'dotnet restore'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'dotnet build --configuration Release'
+                sh 'docker push ${imageTag}'
             }
         }
     }
