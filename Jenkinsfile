@@ -1,8 +1,3 @@
-def majorVersion = '1'
-def minorVersion = '0'
-
-def imageTag = 'sandbox/jenkins-sandbox:${majorVersion}.${minorVersion}.{env.BUILD_NUMBER}'
-
 pipeline {
     agent any
     environment {
@@ -13,7 +8,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                echo 'Image tag is $IMAGE_TAG'
+                echo "Image tag is $IMAGE_TAG"
             }
         }
     }
